@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow-x: hidden;
+    margin:0;
+}
+
+.bg{
+    background: url("../Expanding Card/image/4.jpg") no-repeat center center/cover;
+    position: absolute;
+    width: calc(100vw + 20px);
+    height: calc(100vh + 20px);
+    top:-20px;
+    left: -20px;
+    z-index: -1;
+    filter: blur(30px);
+}
+
+.loading{
+    font-size: 50px;
+    color: yellow;
+    transition: opacity 0.5s linear;
+}
