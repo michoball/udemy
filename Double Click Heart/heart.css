@@ -1,52 +1,50 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url("https://fonts.googleapis.com/css?family=Oswald");
 
-
-
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Oswald' , sans-serif;
-    text-align: center;
-    margin: 0;
-    overflow: hidden;
+body {
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
 }
 
-h3{
-    text-align: center;
-    margin-bottom: 0;
+h3 {
+  text-align: center;
+  margin-bottom: 0;
 }
 
-small{
+small {
   display: block;
   margin-bottom: 20px;
   text-align: center;
 }
 
-.fa-heart{
-    color: red;
+.fa-heart {
+  color: red;
 }
-.loveMe{
-    width: 300px;
-    height: 440px;
-    background: url('../Expanding Card/image/2.jpg') no-repeat center center/cover;
-   margin: auto;
-   cursor: pointer;
-   max-width: 100%;
-   position: relative;
-   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+.loveMe {
+  width: 300px;
+  height: 440px;
+  background: url("../Expanding Card/image/2.jpg") no-repeat center center/cover;
+  margin: auto;
+  cursor: pointer;
+  max-width: 100%;
+  position: relative;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.loveMe .fa-heart{
-    position: absolute;
-    animation: grow 0.6s linear;
-    transform: translate(-50%,-50%) scale(0);
+.loveMe .fa-heart {
+  position: absolute;
+  animation: grow 0.6s linear;
+  transform: translate(-50%, -50%) scale(0);
 }
 
 @keyframes grow {
-    to{
-        transform: translate(-50%,-50%) scale(10);
-        opacity: 0;
-    }
+  to {
+    transform: translate(-50%, -50%) scale(10);
+    opacity: 0;
+  }
 }

@@ -1,45 +1,46 @@
-const loveMe = document.querySelector('.loveMe');
-const times = document.querySelector('#times');
+const loveMe = document.querySelector(".loveMe");
+const times = document.querySelector("#times");
 
 let clickTime = 0;
 let clickCount = 0;
 
-loveMe.addEventListener('click',(e)=>{
-    if(clickTime === 0){
-        clickTime = new Date().getTime()
-    }else{
-        if((new Date().getTime() - clickTime)< 500 ){
-             createHeart(e);
-            clickTime = 0;
-        }else{
-            clickTime = new Date().getTime();
-        }
+loveMe.addEventListener("click", (e) => {
+  if (clickTime === 0) {
+    clickTime = new Date().getTime();
+  } else {
+    if (new Date().getTime() - clickTime < 500) {
+      createHeart(e);
+      clickTime = 0;
+    } else {
+      clickTime = new Date().getTime();
     }
-   
-})
+  }
+});
 
-function createHeart(e){
-    const heart = document.createElement('i');
+function createHeart(e) {
+  const heart = document.createElement("i");
 
-    heart.classList.add('fas');
-    heart.classList.add('fa-heart');
+  heart.classList.add("fas");
+  heart.classList.add("fa-heart");
 
-    const x = e.clientX;
-    const y = e.clientY;
+  const x = e.clientX;
+  const y = e.clientY;
 
-    const LeftOffSet = e.target.offsetLeft;
-    const TopOffSet = e.target.offsetTop;
+  const LeftOffSet = e.target.offsetLeft;
+  const TopOffSet = e.target.offsetTop;
+  console.log(`x=${x} y=${y}`);
+  console.log(`LeftOffset=${LeftOffSet} TopOffset=${TopOffSet}`);
 
-    const xInside = x-LeftOffSet
-    const yInside = y-TopOffSet;
+  const xInside = x - LeftOffSet;
+  const yInside = y - TopOffSet;
 
-    heart.style.left = `${xInside}px`;
-    heart.style.top = `${yInside}px`;
+  heart.style.left = `${xInside}px`;
+  heart.style.top = `${yInside}px`;
 
-    times.innerText= ++clickCount;
-    loveMe.append(heart);
+  times.innerText = ++clickCount;
+  loveMe.append(heart);
 
-    setTimeout(()=>{
-        heart.remove()
-    },2000)
+  setTimeout(() => {
+    heart.remove();
+  }, 2000);
 }
